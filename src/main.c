@@ -132,6 +132,9 @@ static void memory_monitor(lv_task_t *param);
  * @retval int
  */
 
+uint32_t var_in_ram2;
+uint32_t var_in_ram2 __attribute__((section(".RAM2")));
+
 int main(void) {
 #ifdef DEV_BUILD
   ekp_queue_init();
